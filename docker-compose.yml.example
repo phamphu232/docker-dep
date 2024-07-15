@@ -22,6 +22,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - ./nginx:/etc/nginx:ro
       - ./www:/var/www
+      - ./log/nginx:/var/log/nginx
     networks:
       - net1
 
