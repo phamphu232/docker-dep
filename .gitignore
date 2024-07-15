@@ -1,0 +1,11 @@
+nginx/conf.d/*
+!nginx/conf.d/default.conf
+
+www/*
+!www/.gitignore
+
+!.gitignore
+
+.env
+
+docker-compose.yml
