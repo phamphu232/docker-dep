@@ -35,6 +35,7 @@ services:
         GID: ${UID:-1000}
     container_name: php_dep
     restart: unless-stopped
+    user: '${UID:-1000}:${GID:-1000}'
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./php/php.ini:/usr/local/etc/php/php.ini:ro
