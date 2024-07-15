@@ -9,5 +9,6 @@ ARG GID=1000
 RUN deluser www-data 2>/dev/null || true
 RUN addgroup -g ${GID} www-data \
     && adduser -u ${UID} -G www-data -h /home/www-data -s /sbin/nologin -D www-data
+USER www-data
 EXPOSE 9000
 CMD ["php-fpm"]
